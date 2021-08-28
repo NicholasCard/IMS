@@ -1,4 +1,4 @@
-package com.ims.demo;
+package com.ims.API;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
