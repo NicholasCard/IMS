@@ -7,6 +7,7 @@ import com.revature.imsApi.model.Product;
 
 @Repository
 public interface ProductDao extends JpaRepository<Product, Integer>{
+
 	
 }
 
