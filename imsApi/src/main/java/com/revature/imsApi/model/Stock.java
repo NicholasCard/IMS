@@ -17,67 +17,67 @@ public class Stock {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer stock_id;
+    private Integer stockId;
 	
 	@Column(name="product_id")
-	private Integer product_id;
+	private Integer productId;
 	
 	@Column(name="transaction_date")
-	private Date transaction_date;
+	private Date transactionDate;
 
 	@Column(name="vendor")
 	private String vendor;
 	
 	@Column(name="batch_code")
-	private String batch_code;
+	private String batchCode;
 	
 	@Column(name="invoice_num")
-	private String invoice_num;
+	private String invoiceNum;
 	
 	@Column(name="quantity")
 	private int quantity;
 	
 	@Column(name="transaction_type")
     @Enumerated(EnumType.STRING)
-	private StockType transaction_type;
+	private StockType transactionType;
 	
 	public Stock() {
 		super();
 	}
 	
-	public Stock(Integer product_id, Date transaction_date, String vendor, 
-			     String batch_code, String invoice_num, int quantity, StockType transaction_type) {
-		this.product_id = product_id;
-		this.transaction_date = transaction_date;
+	public Stock(Integer productId, Date transactionDate, String vendor, 
+			     String batchCode, String invoiceNum, int quantity, StockType transactionType) {
+		this.productId = productId;
+		this.transactionDate = transactionDate;
 		this.vendor = vendor;
-		this.batch_code = batch_code;
-		this.invoice_num = invoice_num;
+		this.batchCode = batchCode;
+		this.invoiceNum = invoiceNum;
 		this.quantity = quantity;
-		this.transaction_type = transaction_type;
+		this.transactionType = transactionType;
 	}
 
-	public Integer getStock_id() {
-		return stock_id;
+	public Integer getStockId() {
+		return stockId;
 	}
 
-	public void setStock_id(Integer stock_id) {
-		this.stock_id = stock_id;
+	public void setStock_id(Integer stockId) {
+		this.stockId = stockId;
 	}
 
-	public Integer getProduct_id() {
-		return product_id;
+	public Integer getProductId() {
+		return productId;
 	}
 
-	public void setProduct_id(Integer product_id) {
-		this.product_id = product_id;
+	public void setProduct_id(Integer productId) {
+		this.productId = productId;
 	}
 
-	public Date getTransaction_date() {
-		return transaction_date;
+	public Date getTransactionDate() {
+		return transactionDate;
 	}
 
-	public void setTransaction_date(Date transaction_date) {
-		this.transaction_date = transaction_date;
+	public void setTransactionDate(Date transactionDate) {
+		this.transactionDate = transactionDate;
 	}
 
 	public String getVendor() {
@@ -88,20 +88,20 @@ public class Stock {
 		this.vendor = vendor;
 	}
 
-	public String getBatch_code() {
-		return batch_code;
+	public String getBatchCode() {
+		return batchCode;
 	}
 
-	public void setBatch_code(String batch_code) {
-		this.batch_code = batch_code;
+	public void setBatch_code(String batchCode) {
+		this.batchCode = batchCode;
 	}
 
-	public String getInvoice_num() {
-		return invoice_num;
+	public String getInvoiceNum() {
+		return invoiceNum;
 	}
 
-	public void setInvoice_num(String invoice_num) {
-		this.invoice_num = invoice_num;
+	public void setInvoiceNum(String invoiceNum) {
+		this.invoiceNum = invoiceNum;
 	}
 
 	public int getQuantity() {
@@ -112,12 +112,12 @@ public class Stock {
 		this.quantity = quantity;
 	}
 
-	public StockType getTransaction_type() {
-		return transaction_type;
+	public StockType getTransactionType() {
+		return transactionType;
 	}
 
-	public void setTransaction_type(StockType transaction_type) {
-		this.transaction_type = transaction_type;
+	public void setTransaction_type(StockType transactionType) {
+		this.transactionType = transactionType;
 	}
 }
 
