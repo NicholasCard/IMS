@@ -24,7 +24,4 @@ public class StockManagerImpl implements StockManager{
 		return stockDao.findAll();
 	}
 	
-	public void updateProductQauntity() {
-		stockDao.updateProductQuantity();
-	}
 }
