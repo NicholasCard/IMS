@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { StocksComponent } from './stocks/stocks.component';
 import { SearchCategoryComponent } from './search-category/search-category.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SearchCategoryComponent } from './search-category/search-category.compo
     LoginComponent,
     ProductsComponent,
     StocksComponent,
-    SearchCategoryComponent
+    SearchCategoryComponent,
+    TransactionsComponent
   ],
   imports: [
     BrowserModule,
