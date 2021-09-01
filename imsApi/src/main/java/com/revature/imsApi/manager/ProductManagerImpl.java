@@ -31,4 +31,18 @@ public class ProductManagerImpl implements ProductManager {
 	public List<Product> findAll() {
 		return productDao.findAll();
 	}
+
+	@Override
+	public String findDistinctByCategory(String category) {
+		
+		return productDao.findDistinctByCategory(category);
+	}
+
+	@Override
+	public List<String> findDistinctCategories(String category) {
+		
+		return productDao.findDistinctCategories(category);
+	}
+	
+	
 }

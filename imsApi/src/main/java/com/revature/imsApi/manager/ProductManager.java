@@ -10,4 +10,8 @@ public interface ProductManager {
 
 	List<Product> findAll();
 
+	String findDistinctByCategory(String category);
+
+	List<String> findDistinctCategories(String category);
+
 }
