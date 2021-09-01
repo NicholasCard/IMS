@@ -10,4 +10,9 @@ public interface ProductManager {
 
 	List<Product> findAll();
 
+    List<Product> getAllProducts();
+
+    Product create(Product p);
+    
+    Product save(int id, int quantity);
 }

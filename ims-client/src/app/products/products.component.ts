@@ -5,6 +5,8 @@ import { Product } from '../product';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { Output, EventEmitter } from '@angular/core';
+import { StocksService } from '../stocks.service';
+import { Stocks } from '../stocks';
 
 
 @Component({
@@ -17,6 +19,7 @@ export class ProductsComponent implements OnInit {
   products: Product[] = [];
   productByCategory: Product[] = [];
   selectedCategory: string = "";
+  invoiceNumber: number = 0;
   
   categorySelection(term: string) {
     this.selectedCategory = term;
@@ -25,7 +28,8 @@ export class ProductsComponent implements OnInit {
 
   constructor(private productService: ProductService, 
               private route: ActivatedRoute,
-              private location: Location) { }
+              private location: Location,
+              private stocksService: StocksService) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -51,6 +55,41 @@ export class ProductsComponent implements OnInit {
     }
   }
 
+  updateProductStock(product: Product, transactionType: string): void {
+    let transaction:Stocks = {
+      stockId: null,
+      productId: product.productId,
+      transactionDate: new Date(),
+      vendor: product.vendor,
+      batchCode: product.batchCode,
+      invoiceNum: product.invoiceNumber,
+      quantity: product.quantity,
+      transactionType: transactionType
+    };
 
+
+      // productId = products.ticket_id;
+      // transactionDate = new Date();
+      // vendor = "";
+      // batchCode = "";
+      // invoiceNum = "";
+      // quantity = 1;
+
+    // this.stocksService.addStock({ productId, transactionDate, vendor, batchCode, invoiceNum, quantity} as Stocks)
+    //     .subscribe()
+
+    // this.ticketService.addTicket({ ticketType, note, amount, "status": "pending", "employeeId": 1 } as Ticket)
+    //   .subscribe(ticket => {
+    //     this.tickets.push(ticket);
+    //     this.errors = "";
+    //     this.success = "success!"
+        
+    //   },
+    //     error => {
+    //       this.errors = error;
+          
+    //     }
+    //   );
+  }
 
 }

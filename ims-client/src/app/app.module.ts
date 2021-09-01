@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
-import { StocksComponent } from './stocks/stocks.component';
 import { ProductsCategoryComponent } from './products-category/products-category.component';
 import { SearchCategoryComponent } from './search-category/search-category.component';
 
@@ -17,7 +16,6 @@ import { SearchCategoryComponent } from './search-category/search-category.compo
     AppComponent,
     LoginComponent,
     ProductsComponent,
-    StocksComponent,
     ProductsCategoryComponent,
     SearchCategoryComponent
   ],

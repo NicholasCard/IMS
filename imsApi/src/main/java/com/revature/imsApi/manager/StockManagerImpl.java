@@ -23,4 +23,9 @@ public class StockManagerImpl implements StockManager{
 	public List<Stock> findAll() {
 		return stockDao.findAll();
 	}
+	
+	@Override
+	public Stock create (Stock s) {
+		return stockDao.save(s);
+	}
 }
