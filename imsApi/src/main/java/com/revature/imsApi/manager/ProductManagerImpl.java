@@ -1,6 +1,7 @@
 package com.revature.imsApi.manager;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -57,5 +58,10 @@ public class ProductManagerImpl implements ProductManager {
 		Product p = productDao.getById(id);
 		p.setProductQuantity(p.getProductQuantity() + quantity);
 		return productDao.save(p);
+	}
+	
+	@Override
+	public Optional<Product> getProductById(int id) {
+		return productDao.findById(id);
 	}
 }

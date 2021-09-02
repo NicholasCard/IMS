@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import java.util.Optional;
 
 import com.revature.imsApi.manager.ProductManager;
 import com.revature.imsApi.model.Product;
@@ -48,5 +49,11 @@ public class ProductController {
 		@PostMapping(consumes = "application/json", produces = "application/json")
 		public Product create(@RequestBody Product p) {
 			return manager.create(p);
+		}
+		
+		@GetMapping(path="/test")
+		public ResponseEntity<Optional<Product>> getProductById() {
+			Optional<Product> test = manager.getProductById(1);
+			return new ResponseEntity<Optional<Product>>(manager.getProductById(1), HttpStatus.OK);
 		}
 }

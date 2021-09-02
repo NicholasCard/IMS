@@ -20,6 +20,7 @@ export class ProductsComponent implements OnInit {
   productByCategory: Product[] = [];
   selectedCategory: string = "";
   invoiceNumber: number = 0;
+  errorMessage: string = "";
   
   categorySelection(term: string) {
     this.selectedCategory = term;
@@ -66,6 +67,25 @@ export class ProductsComponent implements OnInit {
       quantity: product.quantity,
       transactionType: transactionType
     };
+
+    if (transaction.transactionType == "OUT" && transaction.quantity > product.productQuantity) {
+      this.errorMessage = "Error: Insufficient quantity!"
+    } else {
+      this.errorMessage = "";
+      this.stocksService.updateProductStock(transaction)
+        .subscribe(p => {
+          this.productByCategory.forEach(pr => {
+            if (pr.productId == p.productId) {
+              pr.productQuantity = p.productQuantity;
+              pr.quantity = 0;
+              pr.batchCode = "";
+              pr.invoiceNumber = "";
+              pr.vendor = "";
+            }
+          })
+        });
+    }
+
 
 
       // productId = products.ticket_id;

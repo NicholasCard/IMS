@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Product } from './product';
 import { Stocks } from './stocks';
 
 @Injectable({
@@ -16,8 +17,8 @@ export class StocksService {
   constructor(
     private http: HttpClient) { }
 
-  updateProductStock(stock: Stocks): Observable<Stocks> {
-    return this.http.post<Stocks>(this.baseUrl, stock, this.httpOptions);
+  updateProductStock(stock: Stocks): Observable<Product> {
+    return this.http.post<Product>(this.baseUrl, stock, this.httpOptions);
   }
   
   // addTicket(ticket: Ticket): Observable<Ticket> {
