@@ -12,7 +12,7 @@ export class StocksService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  private baseUrl = "http://localhost:8081/stocks"
+  private baseUrl = "http://localhost:8081/transactions"
 
   constructor(
     private http: HttpClient) { }

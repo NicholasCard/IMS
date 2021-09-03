@@ -24,9 +24,6 @@ public class StockManagerImpl implements StockManager{
 		return stockDao.findAll();
 	}
 	
-@Override
-	public void updateProductQauntity() {
-		stockDao.updateProductQuantity();
 
 	@Override
 	public Stock create (Stock s) {

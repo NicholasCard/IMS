@@ -11,7 +11,6 @@ export class TransactionsComponent implements OnInit {
 
   transactions: Transaction[] = [];
 
-
   constructor(private transactionService: TransactionService) { }
 
 ngOnInit(): void {
