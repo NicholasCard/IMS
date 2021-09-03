@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.revature.imsApi.dao.ProductDao;
+
 import com.revature.imsApi.model.Product;
+
 
 @Service
 public class ProductManagerImpl implements ProductManager {

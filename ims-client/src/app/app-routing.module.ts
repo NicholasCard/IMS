@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { SubmitProductComponent } from './submit-product/submit-product.component';
+
 import { ProductsComponent } from './products/products.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 
 const routes: Routes = [
+  {path: 'submitProduct', component: SubmitProductComponent },
   {path: 'products', component:ProductsComponent},
   {path: 'transactions', component:TransactionsComponent}
   //{path: 'products/:category', component:ProductsComponent} /*might have to make this a seperate component*/

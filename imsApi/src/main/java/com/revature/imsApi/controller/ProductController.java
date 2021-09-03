@@ -17,6 +17,7 @@ import java.util.Optional;
 import com.revature.imsApi.manager.ProductManager;
 import com.revature.imsApi.model.Product;
 
+
 @RestController
 @RequestMapping("/products")
 public class ProductController {
@@ -29,7 +30,7 @@ public class ProductController {
 	public List<Product> findByCategory(@PathVariable String category) {
 		return manager.findByCategory(category);
 	}
-	
+
 
 	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping(path="/ctgry/{ctgry}", produces="application/json")

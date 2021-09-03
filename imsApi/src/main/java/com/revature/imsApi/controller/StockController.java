@@ -1,5 +1,7 @@
 package com.revature.imsApi.controller;
 
+
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +19,9 @@ import com.revature.imsApi.model.Product;
 import com.revature.imsApi.model.Stock;
 
 
+import java.util.List;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/transactions")
 public class StockController {
@@ -25,7 +30,7 @@ public class StockController {
 	private StockManager stockManager;
 	@Autowired
 	private ProductManager productManager;
-	
+
 	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping(produces="application/json")
 	public List<Stock> getAllStock(){

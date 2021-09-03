@@ -2,7 +2,6 @@ package com.revature.imsApi.manager;
 
 import java.util.List;
 import java.util.Optional;
-
 import com.revature.imsApi.model.Product;
 
 public interface ProductManager {
@@ -14,13 +13,12 @@ public interface ProductManager {
 	String findDistinctByCategory(String category);
 
 	List<String> findDistinctCategories(String category);
+  
+  List<Product> getAllProducts();
 
-
-    List<Product> getAllProducts();
-
-    Product create(Product p);
+  Product create(Product p);
     
-    Product save(int id, int quantity);
+  Product save(int id, int quantity);
     
-    Optional<Product> getProductById(int id);
+  Optional<Product> getProductById(int id);
 }

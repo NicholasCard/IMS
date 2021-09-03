@@ -27,7 +27,7 @@ public class Product {
 	
 	@Column(name="min_limit")
 	private int minLimit;
-	
+  
 	@Column(name="product_quantity")
 	private int productQuantity;
 	
@@ -82,7 +82,7 @@ public class Product {
 	public void setMinLimit(int minLimit) {
 		this.minLimit = minLimit;
 	}
-	
+
 	public int getProductQuantity() {
 		return productQuantity;
 	}
