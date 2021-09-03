@@ -30,12 +30,14 @@ public class ProductController {
 		return manager.findByCategory(category);
 	}
 	
+
 	@CrossOrigin(origins = "http://localhost:4200")
-	@GetMapping(produces="application/json")
-	public List<Product> findAll() {
-		return manager.findAll();
+	@GetMapping(path="/ctgry/{ctgry}", produces="application/json")
+	public List<String> findDistinctCategories(@PathVariable String ctgry) {
+		return productManager.findDistinctCategories(ctgry);
 	}
 	
+
 	// get all products
 		@CrossOrigin(origins = "http://localhost:4200")
 		@GetMapping

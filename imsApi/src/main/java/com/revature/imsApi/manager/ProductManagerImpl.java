@@ -54,6 +54,19 @@ public class ProductManagerImpl implements ProductManager {
 	}
 
 	@Override
+	public String findDistinctByCategory(String category) {
+		
+		return productDao.findDistinctByCategory(category);
+	}
+
+	@Override
+	public List<String> findDistinctCategories(String category) {
+		
+		return productDao.findDistinctCategories(category);
+	}
+	
+	
+
 	public Product save(int id, int quantity) {
 		Product p = productDao.getById(id);
 		p.setProductQuantity(p.getProductQuantity() + quantity);
@@ -64,4 +77,5 @@ public class ProductManagerImpl implements ProductManager {
 	public Optional<Product> getProductById(int id) {
 		return productDao.findById(id);
 	}
+
 }

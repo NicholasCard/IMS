@@ -4,9 +4,9 @@
     <input #searchBox id="search-box" (input)="search(searchBox.value)" />
     
     <ul class="search-result">
-      <li *ngFor="let product of products$ | async" >
-        <button (click)="selectCategory(product.category)">
-            {{ product.category }}
+      <li *ngFor="let category of categories$ | async" >
+        <button (click)="selectCategory(category)">
+            {{ category }}
         </button>
       </li>
     </ul>

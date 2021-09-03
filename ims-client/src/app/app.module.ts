@@ -7,8 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
-import { ProductsCategoryComponent } from './products-category/products-category.component';
+import { StocksComponent } from './stocks/stocks.component';
 import { SearchCategoryComponent } from './search-category/search-category.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 
 @NgModule({
@@ -16,8 +17,10 @@ import { SearchCategoryComponent } from './search-category/search-category.compo
     AppComponent,
     LoginComponent,
     ProductsComponent,
-    ProductsCategoryComponent,
-    SearchCategoryComponent
+    StocksComponent,
+    SearchCategoryComponent,
+    TransactionsComponent
+
   ],
   imports: [
     BrowserModule,

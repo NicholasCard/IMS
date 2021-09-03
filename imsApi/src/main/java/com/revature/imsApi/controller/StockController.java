@@ -18,7 +18,7 @@ import com.revature.imsApi.model.Stock;
 
 
 @RestController
-@RequestMapping("/stocks")
+@RequestMapping("/transactions")
 public class StockController {
 	
 	@Autowired

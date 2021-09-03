@@ -8,4 +8,8 @@ import com.revature.imsApi.model.Stock;
 @Repository
 public interface StockDao extends JpaRepository<Stock, Integer>{
 
+	
+	
+	void updateProductQuantity();
+
 }
