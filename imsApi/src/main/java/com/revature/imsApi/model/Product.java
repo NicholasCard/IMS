@@ -25,17 +25,21 @@ public class Product {
 	private String man;
 	
 	@Column(name="min_limit")
-	private int min_limit;
+	private int minLimit;
+
+	@Column(name="product_quantity")
+	private int productQuantity;
 	
 	public Product() {
 		super();
 	}
 	
-	public Product(String title, String category, String man, int min_limit) {
+	public Product(String title, String category, String man, int minLimit, int productQuantity) {
 		this.title = title;
 		this.category = category;
 		this.man = man;
-		this.min_limit = min_limit;
+		this.minLimit = minLimit;
+		this.productQuantity = productQuantity;
 	}
 
 	public Integer getProduct_id() {
@@ -70,12 +74,20 @@ public class Product {
 		this.man = man;
 	}
 
-	public int getMin_limit() {
-		return min_limit;
+	public int getMinLimit() {
+		return minLimit;
 	}
 
-	public void setMin_limit(int min_limit) {
-		this.min_limit = min_limit;
+	public void setMinLimit(int minLimit) {
+		this.minLimit = minLimit;
+	}
+
+	public int getProductQuantity() {
+		return productQuantity;
+	}
+
+	public void setProductQuantity(int productQuantity) {
+		this.productQuantity = productQuantity;
 	}
 }
 

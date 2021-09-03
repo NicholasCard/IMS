@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.revature.imsApi.manager.ProductManager;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/products")
@@ -22,12 +23,12 @@ public class ProductController {
 
 
 
-	@CrossOrigin(origins = "http://localhost:4200")
-	@GetMapping(produces = "application/json")
-	public String saySomething() {
-		System.out.println("ive been called");
-		return "heyo";
-	}
+//	@CrossOrigin(origins = "http://localhost:4200")
+//	@GetMapping(produces = "application/json")
+//	public String saySomething() {
+//		System.out.println("ive been called");
+//		return "heyo";
+//	}
 
 	// get all products
 	@CrossOrigin(origins = "http://localhost:4200")
@@ -42,6 +43,12 @@ public class ProductController {
 	@PostMapping(consumes = "application/json", produces = "application/json")
 	public Product create(@RequestBody Product p) {
 		return manager.create(p);
+	}
+
+	@GetMapping(path="/test")
+	public ResponseEntity<Optional<Product>> getProductById() {
+		Optional<Product> test = manager.getProductById(1);
+		return new ResponseEntity<Optional<Product>>(manager.getProductById(1), HttpStatus.OK);
 	}
 
 }

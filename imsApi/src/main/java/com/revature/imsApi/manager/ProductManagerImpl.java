@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.revature.imsApi.dao.ProductDao;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductManagerImpl implements ProductManager {
@@ -35,4 +36,8 @@ public class ProductManagerImpl implements ProductManager {
 	public Product create(Product p) {
 		return productDao.save(p);
 	}
-}
+
+	@Override
+	public Optional<Product> getProductById(int id) {
+		return productDao.findById(id);
+	}}
