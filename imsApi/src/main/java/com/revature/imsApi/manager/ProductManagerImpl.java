@@ -1,6 +1,8 @@
 package com.revature.imsApi.manager;
 
-import com.revature.imsApi.model.Product;
+import java.util.List;
+import java.util.Optional;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,20 +10,26 @@ import org.springframework.stereotype.Service;
 
 import com.revature.imsApi.dao.ProductDao;
 
-import java.util.List;
-import java.util.Optional;
+import com.revature.imsApi.model.Product;
+
 
 @Service
 public class ProductManagerImpl implements ProductManager {
-	
-	ProductDao productDao;
+
+	@Autowired
+	private ProductDao productDao;
 
 	private static final Logger LOGGER = LogManager.getLogger(ProductManagerImpl.class);
 
+	public ProductManagerImpl(ProductDao productDao) {
+		this.productDao = productDao;
+	}
 
 	// Setter injection
 	@Autowired
-	public void setProductDao(ProductDao productDao) {this.productDao = productDao;}
+	public void setProductDao(ProductDao productDao) {
+		this.productDao = productDao;
+	}
 
 	public ProductManagerImpl() {
 		super();
@@ -38,6 +46,38 @@ public class ProductManagerImpl implements ProductManager {
 	}
 
 	@Override
+	public List<Product> findByCategory(String category) {
+		return productDao.findByCategory(category);
+	}
+
+	@Override
+	public List<Product> findAll() {
+		return productDao.findAll();
+	}
+
+	@Override
+	public String findDistinctByCategory(String category) {
+		
+		return productDao.findDistinctByCategory(category);
+	}
+
+	@Override
+	public List<String> findDistinctCategories(String category) {
+		
+		return productDao.findDistinctCategories(category);
+	}
+	
+	
+
+	public Product save(int id, int quantity) {
+		Product p = productDao.getById(id);
+		p.setProductQuantity(p.getProductQuantity() + quantity);
+		return productDao.save(p);
+	}
+	
+	@Override
 	public Optional<Product> getProductById(int id) {
 		return productDao.findById(id);
-	}}
+	}
+
+}

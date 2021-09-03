@@ -13,7 +13,8 @@ public class Product {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer product_id;
+	@Column(name="product_id")
+    private Integer productId;
 
 	@Column(name="title")
 	private String title;
@@ -26,7 +27,7 @@ public class Product {
 	
 	@Column(name="min_limit")
 	private int minLimit;
-
+  
 	@Column(name="product_quantity")
 	private int productQuantity;
 	
@@ -42,12 +43,12 @@ public class Product {
 		this.productQuantity = productQuantity;
 	}
 
-	public Integer getProduct_id() {
-		return product_id;
+	public Integer getProductId() {
+		return productId;
 	}
 
-	public void setProduct_id(Integer product_id) {
-		this.product_id = product_id;
+	public void setProductId(Integer productId) {
+		this.productId = productId;
 	}
 
 	public String getTitle() {

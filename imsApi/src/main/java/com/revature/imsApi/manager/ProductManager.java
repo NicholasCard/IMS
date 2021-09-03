@@ -1,16 +1,24 @@
 package com.revature.imsApi.manager;
 
-import com.revature.imsApi.model.Product;
-
 import java.util.List;
 import java.util.Optional;
+import com.revature.imsApi.model.Product;
 
 public interface ProductManager {
 
-    List<Product> getAllProducts();
+	List<Product> findByCategory(String category);
 
-    Product create(Product p);
+	List<Product> findAll();
 
-    Optional<Product> getProductById(int id);
+	String findDistinctByCategory(String category);
 
+	List<String> findDistinctCategories(String category);
+  
+  List<Product> getAllProducts();
+
+  Product create(Product p);
+    
+  Product save(int id, int quantity);
+    
+  Optional<Product> getProductById(int id);
 }

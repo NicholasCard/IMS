@@ -1,12 +1,12 @@
 package com.revature.imsApi.manager;
 
-import com.revature.imsApi.model.Stock;
-
 import java.util.List;
+
+import com.revature.imsApi.model.Stock;
 
 public interface StockManager {
 
-    List<Stock> findAll();
+	List<Stock> findAll();
 
-    Stock create(Stock s);
+	Stock create(Stock s);
 }

@@ -1,1 +1,47 @@
-<p>products works!</p>
+<div class = "container">
+    <div class = "card">
+        <h3 class="text-center"> All Products </h3>
+        <h4 class="error-message">{{errorMessage}}</h4>
+        <div class = "card-body">
+            <table class = "table table-striped">
+                <thead>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Manufactorer</th>
+                    <th>Minumum Limit</th>
+                    <th>Quantity</th>
+                    <th>Desired Amount</th>
+                    <th>Vendor</th>
+                    <th>Batch Code</th>
+                    <th>Invoice Number</th>
+                    <th>Adding</th>
+                    <th>Taking</th>
+                </thead>
+                <tbody>
+                    <!-- *ngFor directive-->
+                    <tr *ngFor = "let product of productByCategory">
+                        <td>{{ product.title }}</td>
+                        <td>{{ product.category }}</td>
+                        <td>{{ product.man }}</td>
+                        <td>{{ product.minLimit }}</td>
+                        <td>{{ product.productQuantity}}</td>
+                        <td><input [(ngModel)]="product.quantity" type="number" id="quantity" name="quantity" min="1"></td>
+                        <td><input [(ngModel)]="product.vendor" type="text" id="vendor"></td>
+                        <td><input [(ngModel)]="product.batchCode" type="text" id="batchCode"></td>
+                        <td><input [(ngModel)]="product.invoiceNumber" type="text" id="invoiceNumber"></td>
+                        <td><button (click)="updateProductStock(product, 'IN')">Add</button></td>
+                        <td><button (click)="updateProductStock(product, 'OUT')">Remove</button></td>
+                        <!--<td><a routerLink="{{ticket.ticket_id}}" routerLinkActive="active-link">Details</a></td>
+                        <td><button class="btn btn-block btn-primary" (click)="updateTicket(ticket, 'approved')" *ngIf="(ticket.status !== 'approved' && ticket.status !== 'rejected')">Approve</button></td>
+                        <td><button class="btn btn-block btn-primary" (click)="updateTicket(ticket, 'rejected')" *ngIf="(ticket.status !== 'approved' && ticket.status !== 'rejected')">Reject</button></td>
+                        -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button (click)="getProducts()">See All Products</button>
+
+
+<app-search-category (newCategoryEvent)="categorySelection($event)"></app-search-category>
