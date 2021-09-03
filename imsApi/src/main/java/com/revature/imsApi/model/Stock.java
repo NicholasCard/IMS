@@ -17,6 +17,7 @@ public class Stock {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="stock_id")
     private Integer stockId;
 	
 	@Column(name="product_id")
@@ -60,7 +61,7 @@ public class Stock {
 		return stockId;
 	}
 
-	public void setStock_id(Integer stockId) {
+	public void setStockId(Integer stockId) {
 		this.stockId = stockId;
 	}
 
@@ -68,7 +69,7 @@ public class Stock {
 		return productId;
 	}
 
-	public void setProduct_id(Integer productId) {
+	public void setProductId(Integer productId) {
 		this.productId = productId;
 	}
 
@@ -92,7 +93,7 @@ public class Stock {
 		return batchCode;
 	}
 
-	public void setBatch_code(String batchCode) {
+	public void setBatchCode(String batchCode) {
 		this.batchCode = batchCode;
 	}
 
@@ -116,7 +117,7 @@ public class Stock {
 		return transactionType;
 	}
 
-	public void setTransaction_type(StockType transactionType) {
+	public void setTransactionType(StockType transactionType) {
 		this.transactionType = transactionType;
 	}
 }

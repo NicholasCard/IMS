@@ -20,6 +20,7 @@ import { TransactionsComponent } from './transactions/transactions.component';
     StocksComponent,
     SearchCategoryComponent,
     TransactionsComponent
+
   ],
   imports: [
     BrowserModule,

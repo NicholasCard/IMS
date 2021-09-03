@@ -1,8 +1,13 @@
 export interface Product {
-    ticket_id: number;
+    productId: number;
     title: string;
     category: string;
     man: string;
     minLimit: string;
     productQuantity: number;
+
+    quantity: number;
+    vendor: string;
+    batchCode: string;
+    invoiceNumber: string;
 }

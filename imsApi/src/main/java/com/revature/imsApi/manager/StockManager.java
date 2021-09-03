@@ -8,4 +8,5 @@ public interface StockManager {
 
 	List<Stock> findAll();
 
+	Stock create(Stock s);
 }
