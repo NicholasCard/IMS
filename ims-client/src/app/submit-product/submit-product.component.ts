@@ -15,8 +15,19 @@ export class SubmitProductComponent implements OnInit {
   errors = "";
   success = "";
 
+  productModel: Product = {
+    productId: 0,
+    title: '',
+    category:  '',
+    man:  '',
+    minLimit:  0,
+    productQuantity: 0,
 
-  productModel = new Product();
+    quantity: 0,
+    vendor:  '',
+    batchCode:  '',
+    invoiceNumber:  ''
+  };
 
   constructor(
     private productService: ProductService
