@@ -1,6 +1,6 @@
 <!-- Angular automatically attaches an ngForm directive to an html form tag. We can access the directive by referencing it via a template reference vairable. 
     In this way we can reference the properties of the form to determine whether or not the overall form is valid etc.-->
-<form  (ngSubmit)="onSubmit()" #productForm="ngForm"  novalidate> 
+<form  (ngSubmit)="onSubmit(productForm)" #productForm="ngForm"  novalidate> 
     <hr>
     <div class="form-group">
         <label for="title">
