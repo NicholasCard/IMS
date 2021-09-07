@@ -12,10 +12,10 @@
     border-color: #393E46;
 }
 
-.see-all {
-    position: absolute;
-    left: 3em;
-    top: 13em;
+.see-all-btn {
+    margin-left: 4.6em;
+    margin-top: 1em;
+
 }
 
 body {
