@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Output, EventEmitter } from '@angular/core';
 import { StocksService } from '../stocks.service';
 import { Stocks } from '../stocks';
+import { Transaction } from '../transactions';
 
 
 @Component({
@@ -85,31 +86,33 @@ export class ProductsComponent implements OnInit {
           })
         });
     }
-
-
-
-      // productId = products.ticket_id;
-      // transactionDate = new Date();
-      // vendor = "";
-      // batchCode = "";
-      // invoiceNum = "";
-      // quantity = 1;
-
-    // this.stocksService.addStock({ productId, transactionDate, vendor, batchCode, invoiceNum, quantity} as Stocks)
-    //     .subscribe()
-
-    // this.ticketService.addTicket({ ticketType, note, amount, "status": "pending", "employeeId": 1 } as Ticket)
-    //   .subscribe(ticket => {
-    //     this.tickets.push(ticket);
-    //     this.errors = "";
-    //     this.success = "success!"
-        
-    //   },
-    //     error => {
-    //       this.errors = error;
-          
-    //     }
-    //   );
   }
+
+
+  //    /// THIS WAS COMMENTED OUT ALREADY AND I HAVE NO IDEA WHAT IT DOES YET
+
+  //     // productId = products.ticket_id;
+  //     // transactionDate = new Date();
+  //     // vendor = "";
+  //     // batchCode = "";
+  //     // invoiceNum = "";
+  //     // quantity = 1;
+
+  //   // this.stocksService.addStock({ productId, transactionDate, vendor, batchCode, invoiceNum, quantity} as Stocks)
+  //   //     .subscribe()
+
+  //   // this.ticketService.addTicket({ ticketType, note, amount, "status": "pending", "employeeId": 1 } as Ticket)
+  //   //   .subscribe(ticket => {
+  //   //     this.tickets.push(ticket);
+  //   //     this.errors = "";
+  //   //     this.success = "success!"
+        
+  //   //   },
+  //   //     error => {
+  //   //       this.errors = error;
+          
+  //   //     }
+  //   //   );
+  // }
 
 }

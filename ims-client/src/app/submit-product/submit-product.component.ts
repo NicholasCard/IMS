@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { resetFakeAsyncZone } from '@angular/core/testing';
+import { NgForm } from '@angular/forms';
 import { Product } from '../product';
 import { ProductService } from '../services/product.service';
 
@@ -13,8 +15,19 @@ export class SubmitProductComponent implements OnInit {
   errors = "";
   success = "";
 
+  productModel: Product = {
+    productId: 0,
+    title: '',
+    category:  '',
+    man:  '',
+    minLimit:  0,
+    productQuantity: 0,
 
-  productModel = new Product('', '', '', 0, 0);
+    quantity: 0,
+    vendor:  '',
+    batchCode:  '',
+    invoiceNumber:  ''
+  };
 
   constructor(
     private productService: ProductService
@@ -42,9 +55,11 @@ export class SubmitProductComponent implements OnInit {
     );
   }
 
-  onSubmit(): void {
+  onSubmit(productForm: NgForm): void {
     // onSubmit() calls add() which calls addProduct() from the ProductService
     this.add(this.productModel);
+    productForm.reset();
+    
   }
 
 }
