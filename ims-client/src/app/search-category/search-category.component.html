@@ -5,7 +5,7 @@
     
     <ul class="search-result">
       <li *ngFor="let category of categories$ | async" >
-        <button (click)="selectCategory(category)">
+        <button class="btn btn-sm btn-primary"(click)="selectCategory(category)">
             {{ category }}
         </button>
       </li>
