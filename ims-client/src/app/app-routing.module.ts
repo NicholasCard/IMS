@@ -5,11 +5,13 @@ import { SubmitProductComponent } from './submit-product/submit-product.componen
 
 import { ProductsComponent } from './products/products.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { UpdateStockComponent } from './update-stock/update-stock.component';
 
 const routes: Routes = [
   {path: 'submitProduct', component: SubmitProductComponent },
   {path: 'products', component:ProductsComponent},
-  {path: 'transactions', component:TransactionsComponent}
+  {path: 'transactions', component:TransactionsComponent},
+  {path: 'updateStock', component:UpdateStockComponent}
   //{path: 'products/:category', component:ProductsComponent} /*might have to make this a seperate component*/
 //actually will have to make this a seperate component... must do that later ... unless its the same thing but switched but the paths are different ahhh
 ];

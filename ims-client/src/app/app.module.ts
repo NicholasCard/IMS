@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 //import { StocksComponent } from './stocks/stocks.component';
 import { SearchCategoryComponent } from './search-category/search-category.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { UpdateStockComponent } from './update-stock/update-stock.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { TransactionsComponent } from './transactions/transactions.component';
     ProductsComponent,
     SubmitProductComponent,
     SearchCategoryComponent,
-    TransactionsComponent
+    TransactionsComponent,
+    UpdateStockComponent
   ],
   imports: [
     BrowserModule,
