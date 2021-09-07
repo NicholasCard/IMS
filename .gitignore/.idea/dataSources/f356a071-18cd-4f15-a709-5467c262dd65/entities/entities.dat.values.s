@@ -1,1 +1,0 @@
-ลูกืPยPยPภPมPภPþOýOýO๖MะM๋M่M้M๋M
