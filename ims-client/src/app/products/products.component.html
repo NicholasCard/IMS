@@ -29,9 +29,9 @@
                         <td>{{ product.minLimit }}</td>
                         <td>{{ product.productQuantity}}</td>
                         <td><input class="input-sm" [(ngModel)]="product.quantity" type="number" id="quantity" name="quantity" min="1"></td> 
-                        <td><input class="input-sm" [(ngModel)]="product.vendor" type="text" id="vendor"></td>
-                        <td><input class="input-sm"[(ngModel)]="product.batchCode" type="text" id="batchCode"></td>
-                        <td><input class="input-sm" [(ngModel)]="product.invoiceNumber" type="text" id="invoiceNumber"></td>
+                        <td><input class="input-sm" [(ngModel)]="product.vendor" type="text" id="vendor" maxlength="40"></td>
+                        <td><input class="input-sm"[(ngModel)]="product.batchCode" type="text" id="batchCode" maxlength="10"></td>
+                        <td><input class="input-sm" [(ngModel)]="product.invoiceNumber" type="text" id="invoiceNumber" maxlength="10"></td>
                         <td><button class="btn btn-primary" (click)="updateProductStock(product, 'IN')">Add</button></td>
                         <td><button class="btn btn-secondary" (click)="updateProductStock(product, 'OUT')">Remove</button></td>
                     </tr>
