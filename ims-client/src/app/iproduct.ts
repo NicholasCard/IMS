@@ -6,4 +6,9 @@ export interface IProduct {
     man: string;
     minLimit: number;
     productQuantity: number;
+
+    quantity: number;
+    vendor: string;
+    batchCode: string;
+    invoiceNumber: string;
 }
