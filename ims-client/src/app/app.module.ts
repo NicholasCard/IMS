@@ -11,7 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { SubmitProductComponent } from './submit-product/submit-product.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-//import { StocksComponent } from './stocks/stocks.component';
+// import { StocksComponent } from './stocks/stocks.component';
 import { SearchCategoryComponent } from './search-category/search-category.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { RestockComponent } from './restock/restock.component';

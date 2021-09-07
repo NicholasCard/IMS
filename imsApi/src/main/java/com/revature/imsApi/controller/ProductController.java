@@ -57,7 +57,8 @@ public class ProductController {
 		// create product
 		@CrossOrigin(origins="http://localhost:4200")
 		@PostMapping(consumes = "application/json", produces = "application/json")
-		public Product create(@RequestBody Product p) {
-		return manager.create(p);
+		public int create(@RequestBody Product p) {
+		Product temp = manager.create(p);
+		return temp.getProductId();
 	}
 }

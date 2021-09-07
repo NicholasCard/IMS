@@ -7,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Output, EventEmitter } from '@angular/core';
 import { StocksService } from '../stocks.service';
 import { Stocks } from '../stocks';
-import { Transaction } from '../transactions';
 
 
 @Component({
@@ -69,7 +68,7 @@ export class ProductsComponent implements OnInit {
       transactionType: transactionType
     };
 
-    if (transaction.transactionType == "OUT" && transaction.quantity > product.productQuantity) {
+    if (transaction.transactionType == "OUT" && (transaction.quantity > product.productQuantity || product.productQuantity < product.minLimit)) {
       this.errorMessage = "Error: Insufficient quantity!"
     } else {
       this.errorMessage = "";

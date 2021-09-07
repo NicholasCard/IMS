@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { resetFakeAsyncZone } from '@angular/core/testing';
 import { NgForm } from '@angular/forms';
+import { Subject } from 'rxjs';
 import { Product } from '../product';
 import { ProductService } from '../services/product.service';
 
@@ -44,7 +44,7 @@ export class SubmitProductComponent implements OnInit {
     console.log(newProduct);
     this.productService.addProduct(newProduct)
     .subscribe(product => {
-      console.log('Product submitted', product);
+      console.log('Product submitted', product); // this should return the product id
       this.products.push(product);
       this.errors = "Something went wrong.";
       this.success = "Success!"
