@@ -1,6 +1,6 @@
 export interface Transaction {
-    stock_id: number;
-    product_id: number;
+    stockId: number;
+    productId: number;
     transactionDate: Date;
     vendor: string;
     batchCode: string;

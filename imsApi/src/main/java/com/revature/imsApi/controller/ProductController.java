@@ -46,17 +46,18 @@ public class ProductController {
 			List<Product> products = manager.getAllProducts();
 			return new ResponseEntity<>(products, HttpStatus.OK);
 	 	}
-
-		// create product
-		@CrossOrigin(origins="http://localhost:4200")
-		@PostMapping(consumes = "application/json", produces = "application/json")
-		public Product create(@RequestBody Product p) {
-			return manager.create(p);
-		}
+	 	
 		
 		@GetMapping(path="/test")
 		public ResponseEntity<Optional<Product>> getProductById() {
 			Optional<Product> test = manager.getProductById(1);
 			return new ResponseEntity<Optional<Product>>(manager.getProductById(1), HttpStatus.OK);
 		}
+
+		// create product
+		@CrossOrigin(origins="http://localhost:4200")
+		@PostMapping(consumes = "application/json", produces = "application/json")
+		public Product create(@RequestBody Product p) {
+		return manager.create(p);
+	}
 }
