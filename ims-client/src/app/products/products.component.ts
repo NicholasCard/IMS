@@ -7,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Output, EventEmitter } from '@angular/core';
 import { StocksService } from '../stocks.service';
 import { Stocks } from '../stocks';
-import { Transaction } from '../transactions';
 
 
 @Component({
